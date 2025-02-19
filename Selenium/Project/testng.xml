@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestSuite_HRM">
+    
+    <test name="LoginTests">
+        <classes>
+            <class name="HRM.Orange_HRM"/>
+        </classes>
+    </test>
+
+    <test name="Header Image Validation">
+        <classes>
+            <class name="HRM.HeaderImageValidation"/>
+        </classes>
+    </test>
+    
+    <test name="LoginTest">
+        <parameter name="username" value="orange"/>
+        <parameter name="password" value="orangepassword123"/>
+        <classes>
+            <class name="HRM.Login_Page"/>
+             <class name="HRM.AddNewEmployee"/>
+             <class name="HRM.EditUserInfo"/>
+             <class name="HRM.DirectoryMenu"/>
+             <class name="HRM.AddQualification"/>
+             <class name="HRM.ApplyLeave"/>
+             <class name="HRM.EmergencyContact"/>
+             
+        </classes>
+    </test>
+    
+</suite>
