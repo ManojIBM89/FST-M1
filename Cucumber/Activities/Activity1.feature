@@ -1,4 +1,4 @@
-@Activity 1
+@Activity1
 Feature:Basic Syntax
 Scenario:
 	Given User is on the Google Homepage
