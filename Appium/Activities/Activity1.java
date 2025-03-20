@@ -44,9 +44,9 @@ public class Activity1 {
         driver.findElement(AppiumBy.xpath("//android.widget.Button[@resource-id=\"com.android.calculator2:id/digit_5\"]")).click();
         //Press multiply by using id locator(Using 2nd locator type)
         driver.findElement(AppiumBy.id("op_mul")).click();
-        //Press 8 using id locator(Using 3rd locator type)
+        //Press 8 using id locator
         driver.findElement(AppiumBy.id("digit_8")).click();
-        //Press equals using locator accessibilityID
+        //Press equals using locator accessibilityID(Using 3rd locator type)
         driver.findElement(AppiumBy.accessibilityId("equals")).click();
 	    // Find the result
 	    String result = driver.findElement(AppiumBy.id("result")).getText();
