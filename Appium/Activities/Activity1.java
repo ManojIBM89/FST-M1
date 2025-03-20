@@ -39,21 +39,19 @@ public class Activity1 {
     // Test method
     @Test
     public void multiplyTest() {
-        // Perform the calculation
-    	//Press key 5 in calculator
-        driver.findElement(AppiumBy.id("digit_5")).click();
-      //Press key Multiplication in calculator
-        driver.findElement(AppiumBy.id("op_mul")).click();
-      //Press key 8 in calculator
+         // Perform the calculation
+    	//Press key 5 in calculator using xpath(Using 1st locator type)
+        driver.findElement(AppiumBy.xpath("//android.widget.Button[@resource-id=\"com.android.calculator2:id/digit_5\"]")).click();
+        //Press multiply by using accessibilityid locator(Using 2nd locator type)
+        driver.findElement(AppiumBy.accessibilityId("multiply")).click();
+        //Press 8 using id locator(Using 3rd locator type)
         driver.findElement(AppiumBy.id("digit_8")).click();
-      //Press key equals in calculator
+        //Press equals using locator accessibilityID
         driver.findElement(AppiumBy.accessibilityId("equals")).click();
-
-        // Find the result
-        String result = driver.findElement(AppiumBy.id("result")).getText();
-
-        // Assertion
-        assertEquals(result, "40");
+	    // Find the result
+	    String result = driver.findElement(AppiumBy.id("result")).getText();
+	    // Assertion
+	    Assert.assertEquals(result, "40");
     }
 
 
