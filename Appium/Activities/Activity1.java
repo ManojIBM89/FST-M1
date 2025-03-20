@@ -48,10 +48,11 @@ public class Activity1 {
         driver.findElement(AppiumBy.id("digit_8")).click();
         //Press equals using locator accessibilityID
         driver.findElement(AppiumBy.accessibilityId("equals")).click();
-	    // Find the result
-	    String result = driver.findElement(AppiumBy.id("result")).getText();
-	    // Assertion
-	    Assert.assertEquals(result, "40");
+	    
+	// Find the result
+	String result = driver.findElement(AppiumBy.id("result")).getText();
+	// Assertion
+	Assert.assertEquals(result, "40");
     }
 
 
